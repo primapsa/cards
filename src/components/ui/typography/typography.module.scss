@@ -1,0 +1,78 @@
+@mixin typography($fontSize, $lineHeight, $fontWeight) {
+  margin: 0;
+
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  color: var(--color-dark-900);
+}
+.large {
+  @include typography(var(--font-size-xxl), var(--line-height-xl), var(--font-weight-bold))
+}
+.h1 {
+  @include typography(var(--font-size-xxl), var(--line-height-xl), var(--font-weight-bold));
+}
+
+.h2 {
+  @include typography(var(--font-size-xl), var(--line-height-m), var(--font-weight-bold));
+}
+
+.h3 {
+  @include typography(var(--font-size-l), var(--line-height-m), var(--font-weight-bold));
+}
+
+.subtitle1 {
+  @include typography(var(--font-size-m), var(--line-height-m), var(--font-weight-bold));
+}
+
+.subtitle2 {
+  @include typography(var(--font-size-s), var(--line-height-m), var(--font-weight-bold));
+}
+
+.body1 {
+  @include typography(var(--font-size-m), var(--line-height-m), var(--font-weight-regular));
+}
+
+.body2 {
+  @include typography(var(--font-size-s), var(--line-height-m), var(--font-weight-regular));
+}
+
+.overline {
+  @include typography(var(--font-size-s), var(--line-height-m), var(--font-weight-regular));
+
+  text-transform: uppercase;
+}
+
+.caption {
+  @include typography(var(--font-size-xs), var(--line-height-m), var(--font-weight-regular));
+
+  display: inline-block;
+  text-align: start;
+}
+
+
+
+.link1 {
+  @include typography(inherit, inherit, inherit);
+
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--color-info-500);
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.link2 {
+  @include typography(inherit, inherit, inherit);
+
+  cursor: pointer;
+  color: var(--color-info-500);
+  text-decoration: underline;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
